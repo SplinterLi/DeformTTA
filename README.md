@@ -1,6 +1,6 @@
 # DeformTTA
 
-Minimal release code for **DeformTTA: Morphology-Aware Controllable Deformation for Test-Time Adaptation in Fetal Cardiac Ultrasound Image Segmentation**.
+Code for **DeformTTA: Morphology-Aware Controllable Deformation for Test-Time Adaptation in Fetal Cardiac Ultrasound Image Segmentation**.
 
 # Abstract
 Fetal cardiac segmentation frequently suffers from performance degradation under domain shifts induced by heterogeneous scanners and rapid physiological motion. Standard test-time adaptation (TTA)methods typically rely on generic consistency or entropy minimization, which lack explicit anatomical constraints and fail to preserve biological plausibility under complex cardiac deformations. We propose DeformTTA, a physiology-driven TTA framework that bolsters segmentation robustness by explicitly modeling cardiac dynamics. Unlike domainagnostic augmentations, DeformTTA leverages a deformation network to simulate realistic fetal heart movements, integrated with a generative model for authentic texture synthesis. Furthermore, a morphology-aware shape prior is introduced to regularize the adaptation process, ensuring the structural integrity of the predicted segmentations. By optimizing for motion-conditioned consistency and morphological alignment, DeformTTA effectively generalizes to target domains during inference. Multi-center experiments demonstrate that DeformTTA significantly outperforms state-of-the-art baselines, particularly in segmenting complex pathological cases. Our code will be made publicly available.
