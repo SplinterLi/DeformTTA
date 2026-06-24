@@ -1,0 +1,63 @@
+{
+  "workspace_root": ".",
+  "outputs_root": "experiments/deformtta_main_runs",
+
+  "common": {
+    "model_folder": "<PATH_TO_NNUNET_MODEL_FOLDER>",
+    "checkpoint_name": "checkpoint_final.pth",
+    "real_images_dir": "<PATH_TO_TARGET_IMAGES>",
+    "real_masks_dir": "<PATH_TO_TARGET_LABELS>",
+    "initial_masks_dir": "<PATH_TO_INITIAL_PREDICTION_MASKS>",
+    "num_classes": 7,
+    "device": "cuda:0",
+    "batch_size": 1
+  },
+
+  "deformation": {
+    "model_path": "<PATH_TO_DEFORMATION_CHECKPOINT>",
+    "scales": [0.5, 0.75, 1.0, 1.25],
+    "max_samples": -1,
+    "num_classes": 4,
+    "image_size": 384,
+    "allow_ground_truth_masks": false
+  },
+
+  "controlnet": {
+    "controlnet_path": "<PATH_TO_CONTROLNET_CHECKPOINT>",
+    "diffusion_path": "<PATH_TO_BASE_DIFFUSION_MODEL>",
+    "prompt": "fetal cardiac ultrasound image, realistic B-mode texture",
+    "negative_prompt": "cartoon, low quality, distorted anatomy",
+    "num_inference_steps": 20,
+    "guidance_scale": 7.5,
+    "max_images": -1,
+    "seed": 42
+  },
+
+  "adapt_with_synth": {
+    "epochs": 1,
+    "lr": 0.0001,
+    "batch_size": 2,
+    "max_synthetic": 5,
+    "weight_decay": 0.0
+  },
+
+  "tent": {
+    "tta_steps": 3,
+    "lr": 0.0001,
+    "online": false
+  },
+
+  "experiments": [
+    {
+      "name": "tent",
+      "type": "tent",
+      "enabled": true
+    },
+    {
+      "name": "deformtta_full",
+      "type": "deformtta",
+      "enabled": true
+    }
+  ]
+}
+
