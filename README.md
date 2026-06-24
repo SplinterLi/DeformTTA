@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 Install a CUDA-compatible PyTorch build for your system if the default wheel is not appropriate.
 
-## Required External Assets
+## Configs
 
 Provide these paths in `configs/main_config.example.json` or in a copied config file:
 
