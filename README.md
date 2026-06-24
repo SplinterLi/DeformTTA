@@ -73,10 +73,4 @@ Run DeformTTA full:
 python run_deformtta.py --config configs/main_config.json --only deformtta_full
 ```
 
-Run the Tent baseline:
-
-```bash
-python run_deformtta.py --config configs/main_config.json --only tent
-```
-
 Outputs are written under `experiments/deformtta_main_runs/` by default.
