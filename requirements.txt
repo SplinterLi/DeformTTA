@@ -1,0 +1,10 @@
+accelerate
+diffusers
+huggingface-hub
+nnunetv2
+numpy
+pillow
+torch
+torchvision
+transformers
+
